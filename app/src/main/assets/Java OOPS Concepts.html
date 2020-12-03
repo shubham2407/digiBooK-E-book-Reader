@@ -1,0 +1,154 @@
+<h1 style="text-align: center;">What is OOPS</h1>
+<p>OOPS is a programming approach which provides solution to real life problems with the help of algorithms based on real world. It uses real world approach to solve a problem. So object oriented technique offers better and easy way to write program then procedural programming languages such as C, ALGOL, PASCAL etc.</p>
+<p>Java is an object oriented language which supports&nbsp;<strong>object oriented concepts like: class and object.</strong>&nbsp;In OOPS data is treated important and&nbsp;<strong>encapsulated within the class</strong>, object then use to access that data during runtime.</p>
+<p>OOPS provides advantages over the other programming paradigm and include following features.</p>
+<hr />
+<h2>Main Features of OOPS</h2>
+<ul class="content">
+<li>Inheritence</li>
+<li>Polymorphism</li>
+<li>Encapsulation</li>
+<li>Abstraction</li>
+</ul>
+<p>As an object oriented language Java supports all the features given above. We will discuss all these features in detail later.</p>
+<hr />
+<h2>Java Class</h2>
+<p>In Java everything is&nbsp;<strong>encapsulated under classes</strong>. Class is the core of Java language. It can be defined as&nbsp;<strong>a template</strong>&nbsp;that describe the behaviors and states of a particular entity.</p>
+<p>A class defines new data type. Once defined this new type can be used to create object of that type.</p>
+<p>Object is&nbsp;<strong>an instance of class</strong>. You may also call it as physical existence of a logical template class.</p>
+<p>In Java, to declare a class&nbsp;<strong>class</strong>&nbsp;keyword is used. A class contain both&nbsp;<strong>data and methods</strong>&nbsp;that operate on that data. The data or variables defined within a class are called&nbsp;<strong>instance variables</strong>&nbsp;and the code that operates on this data is known as&nbsp;<strong>methods</strong>.</p>
+<p>Thus, the instance variables and methods are known as&nbsp;<strong>class members</strong>.</p>
+<div>
+<div class="center">&nbsp;</div>
+</div>
+<hr />
+<h3>Rules for Java Class</h3>
+<p>&nbsp;</p>
+<ul class="content">
+<li>A class can have only&nbsp;<strong>public or default(no modifier)</strong>&nbsp;access specifier.</li>
+<li>It can be either&nbsp;<strong>abstract, final or concrete (normal class).</strong></li>
+<li>It must have the&nbsp;<strong>class keyword</strong>, and class must be followed by a legal identifier.</li>
+<li>It may optionally extend only one parent class. By default, it extends&nbsp;<strong>Object</strong>&nbsp;class.</li>
+<li>The variables and methods are declared within a set of curly braces.</li>
+</ul>
+<p>&nbsp;</p>
+<p>A Java class can contains fields, methods, constructors, and blocks. Lets see a general structure of a class.</p>
+<h4>Java class Syntax</h4>
+<pre class=" language-java"><code class=" language-java">
+<span class="token keyword">class</span>  <span class="token class-name">class_name</span> <span class="token punctuation">{</span>
+     field<span class="token punctuation">;</span>
+     method<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+	</code></pre>
+<hr />
+<h3>A simple class example</h3>
+<p>Suppose,&nbsp;<strong>Student</strong>&nbsp;is a class and student's name, roll number, age are its&nbsp;<strong>fields</strong>&nbsp;and&nbsp;<strong>info()</strong>&nbsp;is a&nbsp;<strong>method</strong>. Then class will look like below.</p>
+<pre class="java language-java"><code class=" language-java"><span class="token keyword">class</span> <span class="token class-name">Student<span class="token punctuation">.</span></span>
+<span class="token punctuation">{</span>
+ String name<span class="token punctuation">;</span>
+ <span class="token keyword">int</span> rollno<span class="token punctuation">;</span>
+ <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment" spellcheck="true">// some code</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&nbsp;</p>
+<p>This is how a class look structurally. It is a blueprint for an object. We can call its fields and methods by using the object.</p>
+<p>The fields declared inside the class are known as&nbsp;<strong>instance variables</strong>. It gets memory when an object is created at runtime.</p>
+<p><strong>Methods</strong>&nbsp;in the class are similar to the functions that are used to perform operations and represent behavior of an object.</p>
+<p>After learning about the class, now lets understand what is an object.</p>
+<hr />
+<h3>Java Object</h3>
+<p>Object is an instance of a class while class is a blueprint of an object. An object represents the class and consists of&nbsp;<strong>properties</strong>&nbsp;and&nbsp;<strong>behavior</strong>.</p>
+<p>Properties refer to the fields declared with in class and behavior represents to the methods available in the class.</p>
+<p>In real world, we can understand object as a cell phone that has its properties like: name, cost, color etc and behavior like calling, chatting etc.</p>
+<p>So we can say that object is a real world entity. Some real world objects are: ball, fan, car etc.</p>
+<p>There is a syntax to create an object in the Java.</p>
+<hr />
+<h4><strong>Java Object Syntax</strong></h4>
+<hr />
+<pre class=" language-java"><code class=" language-java">className variable_name <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">className</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Here,&nbsp;<strong>className</strong>&nbsp;is the name of class that can be anything like: Student that we declared in the above example.</p>
+<p><strong>variable_name</strong>&nbsp;is name of reference variable that is used to&nbsp;<strong>hold the reference</strong>&nbsp;of created object.</p>
+<p>The&nbsp;<strong>new</strong>&nbsp;is a keyword which is used to allocate memory for the object.</p>
+<p>Lets see an example to create an object of class Student that we created in the above class section.</p>
+<p>Although there are many other ways by which we can create object of the class.</p>
+<hr />
+<h4><strong>Example: Object creation</strong></h4>
+<hr />
+<pre class="java language-java"><code class=" language-java">Student std <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Here,&nbsp;<strong>std</strong>&nbsp;is an object that represents the class Student during runtime.</p>
+<p>The&nbsp;<strong>new</strong>&nbsp;keyword creates an actual physical copy of the object and assign it to the&nbsp;<strong>std</strong>&nbsp;variable. It will have physical existence and get memory in heap area.&nbsp;<strong>The new operator dynamically allocates memory for an object</strong>.</p>
+<p class="center"><img src="https://www.studytonight.com/java/images/object-creation.jpg" alt="creation of object in java" /></p>
+<p>In this image, we can get idea how the an object refer to the memory area.</p>
+<p>Now lets understand object and class combinally by using a real example.</p>
+<hr />
+<h4><strong>Example: Creating a Class and its object</strong></h4>
+<hr />
+<pre class=" language-java"><code class=" language-java">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">{</span>      
+ 
+	 String name<span class="token punctuation">;</span>
+	 <span class="token keyword">int</span> rollno<span class="token punctuation">;</span>
+	 <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+	 
+	<span class="token keyword">void</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Name: "</span><span class="token operator">+</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Roll Number: "</span><span class="token operator">+</span>rollno<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Age: "</span><span class="token operator">+</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>  
+	
+	
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		Student student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token comment" spellcheck="true">// Accessing and property value</span>
+		student<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Ramesh"</span><span class="token punctuation">;</span>
+		student<span class="token punctuation">.</span>rollno <span class="token operator">=</span> <span class="token number">253</span><span class="token punctuation">;</span>
+		student<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+		
+		<span class="token comment" spellcheck="true">// Calling method</span>
+		student<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>  
+	</code></pre>
+<p class="output">Name: Ramesh Roll Number: 253 Age: 25</p>
+<p>In this example, we created a class Student and an object. Here you may be surprised of seeing main() method but don&rsquo;t worry it is just an entry point of the program by which JVM starts execution.</p>
+<p>Here, we used main method to create object of Student class and access its fields and methods.</p>
+<hr />
+<h4><strong>Example: Class fields</strong></h4>
+<hr />
+<pre class=" language-java"><code class=" language-java">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">{</span>      
+ 
+	 String name<span class="token punctuation">;</span>
+	 <span class="token keyword">int</span> rollno<span class="token punctuation">;</span>
+	 <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+	 
+	<span class="token keyword">void</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Name: "</span><span class="token operator">+</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Roll Number: "</span><span class="token operator">+</span>rollno<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Age: "</span><span class="token operator">+</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>  
+	
+	
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		Student student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token comment" spellcheck="true">// Calling method</span>
+		student<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+	</code></pre>
+<p class="output">Name: null Roll Number: 0 Age: 0</p>
+<p>In case, if we don&rsquo;t initialized values of class fields then they are initialized with their&nbsp;<strong>default values</strong>.</p>
+<hr />
+<h3>Default values of instance variables</h3>
+<p><strong>int, byte, short, long -&gt; 0</strong></p>
+<p><strong>float, double &rarr; 0.0</strong></p>
+<p><strong>string or any reference = null</strong></p>
+<p><strong>boolean &rarr; false</strong></p>
+<p>These values are initialized by the default constructor of JVM during object creation at runtime.</p>

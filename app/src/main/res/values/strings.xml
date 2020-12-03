@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">digiBooK</string>
+    <string-array name="stories_names">
+        <item>Overview of Java</item>
+        <item>Java OOPS Concepts</item>
+        <item>Java Exception Handling</item>
+    </string-array>
+    <string-array name="cppstories_names">
+        <item>Introduction to C++</item>
+        <item>C++ Classes and Objects</item>
+        <item>Abstract Class and Pure Virtual Function in C++</item>
+    </string-array>
+    <string-array name="fgstories_names">
+        <item>Chapter 1</item>
+        <item>Chapter 2</item>
+        <item>Chapter 3</item>
+    </string-array>
+    <string-array name="tfstories_names">
+        <item>Chapter 1</item>
+        <item>Chapter 2</item>
+        <item>Chapter 3</item>
+    </string-array>
+    <string-array name="hpstories_names">
+        <item>Summary</item>
+    </string-array>
+    <string-array name="fwstories_names">
+        <item>Summary</item>
+    </string-array>
+</resources>

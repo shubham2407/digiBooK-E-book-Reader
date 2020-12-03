@@ -1,0 +1,88 @@
+<h1 style="text-align: center;">Abstract Class and Pure Virtual Function in C++</h1>
+<p>Abstract Class is a class which contains atleast one Pure Virtual function in it. Abstract classes are used to provide an Interface for its sub classes. Classes inheriting an Abstract Class must provide definition to the pure virtual function, otherwise they will also become abstract class.</p>
+<hr />
+<h2>Characteristics of Abstract Class</h2>
+<ol class="content">
+<li>Abstract class cannot be instantiated, but pointers and refrences of Abstract class type can be created.</li>
+<li>Abstract class can have normal functions and variables along with a pure virtual function.</li>
+<li>Abstract classes are mainly used for Upcasting, so that its derived classes can use its interface.</li>
+<li>Classes inheriting an Abstract Class must implement all pure virtual functions, or else they will become Abstract too.</li>
+</ol>
+<hr />
+<h2>Pure Virtual Functions in C++</h2>
+<p>Pure virtual Functions are virtual functions with no definition. They start with&nbsp;<strong>virtual</strong>&nbsp;keyword and ends with&nbsp;<code>= 0</code>. Here is the syntax for a pure virtual function,</p>
+<p>&nbsp;</p>
+<pre class="cpp language-clike"><code class=" language-clike">virtual void <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></code></pre>
+<hr />
+<h3>Example of Abstract Class in C++</h3>
+<p>Below we have a simple example where we have defined an abstract class,</p>
+<pre class="cpp language-clike"><code class=" language-clike"><span class="token comment" spellcheck="true">//Abstract base class</span>
+class <span class="token class-name">Base</span>          
+<span class="token punctuation">{</span>
+    public<span class="token punctuation">:</span>
+    virtual void <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// Pure Virtual Function</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+class <span class="token class-name">Derived</span><span class="token punctuation">:</span>public Base
+<span class="token punctuation">{</span>
+    public<span class="token punctuation">:</span>
+    void <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span> 
+        cout <span class="token operator">&lt;</span><span class="token operator">&lt;</span> <span class="token string">"Implementation of Virtual Function in Derived class\n"</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+int <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Base obj<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//Compile Time Error</span>
+    Base <span class="token operator">*</span>b<span class="token punctuation">;</span>
+    Derived d<span class="token punctuation">;</span>
+    b <span class="token operator">=</span> <span class="token operator">&amp;</span>d<span class="token punctuation">;</span>
+    b<span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p class="output">Implementation of Virtual Function in Derived class</p>
+<p>In the above example Base class is abstract, with pure virtual&nbsp;<strong>show()</strong>&nbsp;function, hence we cannot create object of base class.</p>
+<div>
+<div class="center">&nbsp;</div>
+</div>
+<hr />
+<h3>Why can't we create Object of an Abstract Class?</h3>
+<p>When we create a pure virtual function in Abstract class, we reserve a slot for a function in the&nbsp;<strong>VTABLE</strong>(studied in last topic), but doesn't put any address in that slot. Hence the VTABLE will be incomplete.</p>
+<p>As the VTABLE for Abstract class is incomplete, hence the compiler will not let the creation of object for such class and will display an errror message whenever you try to do so.</p>
+<hr />
+<h2>Pure Virtual definitions</h2>
+<ul class="content">
+<li>Pure Virtual functions can be given a small definition in the Abstract class, which you want all the derived classes to have. Still you cannot create object of Abstract class.</li>
+<li>Also, the Pure Virtual function must be defined outside the class definition. If you will define it inside the class definition, complier will give an error. Inline pure virtual definition is Illegal.</li>
+</ul>
+<pre class="cpp language-clike"><code class=" language-clike"><span class="token comment" spellcheck="true">// Abstract base class</span>
+class <span class="token class-name">Base</span>         
+<span class="token punctuation">{</span>
+    public<span class="token punctuation">:</span>
+    virtual void <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//Pure Virtual Function</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+void Base <span class="token punctuation">:</span><span class="token punctuation">:</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//Pure Virtual definition</span>
+<span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;</span><span class="token operator">&lt;</span> <span class="token string">"Pure Virtual definition\n"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+class <span class="token class-name">Derived</span><span class="token punctuation">:</span>public Base
+<span class="token punctuation">{</span>
+    public<span class="token punctuation">:</span>
+    void <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span> 
+        cout <span class="token operator">&lt;</span><span class="token operator">&lt;</span> <span class="token string">"Implementation of Virtual Function in Derived class\n"</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+int <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Base <span class="token operator">*</span>b<span class="token punctuation">;</span>
+    Derived d<span class="token punctuation">;</span>
+    b <span class="token operator">=</span> <span class="token operator">&amp;</span>d<span class="token punctuation">;</span>
+    b<span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p class="output">Implementation of Virtual Function in Derived class</p>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.andro.digibook">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.andro.digibook.thief1"></activity>
+        <activity android:name="com.andro.digibook.forrestgump1" />
+        <activity android:name="com.andro.digibook.cpp1" />
+        <activity android:name="com.andro.digibook.cpp" />
+        <activity android:name="com.andro.digibook.bsummary" />
+        <activity android:name="com.andro.digibook.happier" />
+        <activity android:name="com.andro.digibook.happier1" />
+        <activity android:name="com.andro.digibook.will" />
+        <activity android:name="com.andro.digibook.will1" />
+        <activity android:name="com.andro.digibook.jv1" />
+        <activity android:name="com.andro.digibook.novel" />
+        <activity android:name="com.andro.digibook.programming" />
+        <activity android:name="com.andro.digibook.forrestgump" />
+        <activity android:name="com.andro.digibook.thief" />
+        <activity android:name="com.andro.digibook.Dashboard" />
+        <activity android:name="com.andro.digibook.jv" />
+        <activity android:name="com.andro.digibook.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

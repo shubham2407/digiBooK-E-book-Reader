@@ -1,0 +1,61 @@
+<h1 style="text-align: center;">Java Exception Handling</h1>
+<p>Exception Handling is a mechanism to handle exception at runtime. Exception is a condition that occurs during program execution and lead to program termination abnormally. There can be several reasons that can lead to exceptions, including programmer error, hardware failures, files that need to be opened cannot be found, resource exhaustion etc.</p>
+<p>Suppose we run a program to read data from a file and if the file is not available then the program will stop execution and terminate the program by reporting the exception message.</p>
+<p>The problem with the exception is, it terminates the program and skip rest of the execution that means if a program have 100 lines of code and at line 10 an exception occur then program will terminate immediately by skipping execution of rest 90 lines of code.</p>
+<p>To handle this problem, we use exception handling that avoid program termination and continue the execution by skipping exception code.</p>
+<p>Java exception handling provides a meaningful message to the user about the issue rather than a system generated message, which may not be understandable to a user.</p>
+<h3>Uncaught Exceptions</h3>
+<p>Lets understand exception with an example. When we don't handle the exceptions, it leads to unexpected program termination. In this program, an ArithmeticException will be throw due to divide by zero.</p>
+<pre class="java language-java"><code class=" language-java"><span class="token keyword">class</span> <span class="token class-name">UncaughtException</span>
+<span class="token punctuation">{</span>
+ <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+ <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">7</span><span class="token operator">/</span>a<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// Divide by zero, will lead to exception</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This will lead to an exception at runtime, hence the Java run-time system will construct an exception and then throw it. As we don't have any mechanism for handling exception in the above program, hence the default handler (JVM) will handle the exception and will print the details of the exception on the terminal.</p>
+<p class="center"><img src="https://www.studytonight.com/java/images/uncaught-exception-error-in-java.gif" alt="Uncaught Exception in java" /></p>
+<h3>Java Exception</h3>
+<p>A Java Exception is an object that describes the exception that occurs in a program. When an exceptional events occurs in java, an exception is said to be thrown. The code that's responsible for doing something about the exception is called an&nbsp;<strong>exception handler</strong></p>
+<h3>How to Handle Exception</h3>
+<p>Java provides controls to handle exception in the program. These controls are listed below.</p>
+<ul class="content">
+<li>Try : It is used to enclose the suspected code.</li>
+<li>Catch: It acts as exception handler.</li>
+<li>Finally: It is used to execute necessary code.</li>
+<li>Throw: It throws the exception explicitly.</li>
+<li>Throws: It informs for the possible exception.</li>
+</ul>
+<p>We will discuss about all these in our next tutorials.</p>
+<h3>Types of Exceptions</h3>
+<p>In Java, exceptions broadly can be categories into checked exception, unchecked exception and error based on the nature of exception.</p>
+<ul class="content">
+<ul class="content">
+<li><strong>Checked Exception</strong></li>
+</ul>
+</ul>
+<p>The exception that can be predicted by the JVM at the compile time for&nbsp;<strong>example</strong>&nbsp;: File that need to be opened is not found, SQLException etc. These type of exceptions must be checked at compile time.</p>
+<ul class="content">
+<ul class="content">
+<li><strong>Unchecked Exception</strong></li>
+</ul>
+</ul>
+<p>Unchecked exceptions are the class that extends RuntimeException class. Unchecked exception are ignored at compile time and checked at runtime. For&nbsp;<strong>example</strong>&nbsp;: ArithmeticException, NullPointerException, Array Index out of Bound exception. Unchecked exceptions are checked at runtime.</p>
+<ul class="content">
+<ul class="content">
+<li><strong>Error</strong></li>
+</ul>
+</ul>
+<p>Errors are typically ignored in code because you can rarely do anything about an error. For&nbsp;<strong>example</strong>, if stack overflow occurs, an error will arise. This type of error cannot be handled in the code.</p>
+<div>
+<div class="center">&nbsp;</div>
+</div>
+<h2>Java Exception class Hierarchy</h2>
+<p>All exception types are subclasses of class&nbsp;<strong>Throwable</strong>, which is at the top of exception class hierarchy.</p>
+<p class="center"><img src="https://www.studytonight.com/java/images/exception-class-hierarchy-java.jpg" alt="exception handling in java" /></p>
+<ul class="content">
+<li><strong>Exception</strong>&nbsp;class is for exceptional conditions that program should catch. This class is extended to create user specific exception classes.</li>
+<li><strong>RuntimeException</strong>&nbsp;is a subclass of Exception. Exceptions under this class are automatically defined for programs.</li>
+<li><strong>Exceptions</strong>&nbsp;of type&nbsp;<strong>Error</strong>&nbsp;are used by the Java run-time system to indicate errors having to do with the run-time environment, itself. Stack overflow is an example of such an error.</li>
+</ul>
